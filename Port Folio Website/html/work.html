@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work About</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/work.css">
+</head>
+<body >
+    <div class="cursor"></div>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+           <div class="logo-main cursor-scale small"><img src="../img/logo-saasina-cp.jpeg" alt="logo"></div>
+
+            <ul class="nav-list cursor-scale small">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Work</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="./about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <div id="active" class="active"></div>
+
+            </ul>
+
+        </nav>
+
+        <div class="work">
+
+            <h1 class="work__heading cursor-scale small"> My Passion.... </h1>
+    
+            <p class="work__content cursor-scale small">
+    
+              My portfolio website shares my journey through interactive experiences from horizontal and vertical perspectives, showcasing my ability to design and develop responsive, user-friendly websites and applications that meet the unique needs of each client. I am committed to staying up-to-date with the latest trends and technologies in the field of web development, ensuring that your website will be modern, efficient, and secure.<br/>
+
+            </p>
+
+            <div class="icon cursor-scale "> <span>Projects </span> <a href=""><i class="fa-solid fa-arrow-down"></i> </a>  
+            </div>
+        
+
+            </div> 
+
+            <div class="projects-container">
+
+                <div class="project" data-aos="fade-left">
+                  <img src="../img/natours.png" alt="Natours" class="project__photo cursor-scale">
+                  <div class="project-details">
+                    <h1 class="cursor-scale small">Natours</h1>
+                    <span class="development">Html,scss</span>
+                   <p> <a href="https://saasina-natours.netlify.app/" target="_blank" class="view-project-1">View Project</a> </p>
+                  </div>
+                </div>
+
+                <div class="project" data-aos="fade-left">
+                    <img src="../img/trillo.jpeg" alt="Trillo" class="project__photo cursor-scale">
+                    <div class="project-details">
+                      <h1 class="cursor-scale small">Trillo</h1>
+                      <span class="development">Html,scss</span>
+                     <p> <a href="https://saasina-trillo.netlify.app/" target="_blank" class="view-project-2">View Project</a> </p>
+                    </div>
+                  </div>
+
+                  <div class="project" data-aos="fade-left">
+                    <img src="../img/nexter.jpeg" alt="Nexter" class="project__photo cursor-scale">
+                    <div class="project-details">
+                      <h1 class="cursor-scale small">Nexter</h1>
+                      <span class="development">Html,scss</span>
+                     <p> <a href="https://saasina-nexter.netlify.app/" target="_blank" class="view-project-3">View Project</a> </p>
+                    </div>
+                  </div>
+
+                  <div class="project" data-aos="fade-left">
+                    <img src="../img/online-store.png" alt="Saasina" class="project__photo cursor-scale">
+                    <div class="project-details">
+                      <h1 class="cursor-scale small">Saasina</h1>
+                      <span class="development">Html,css,JavaScript</span>
+                     <p> <a href="https://saasina-online-shopping-store.netlify.app/" target="_blank" class="view-project-4">View Project</a> </p>
+                    </div>
+                  </div>
+
+                  <div class="project" data-aos="fade-left">
+                    <img src="../img/pizza.jpeg" alt="Pizza" class="project__photo cursor-scale">
+                    <div class="project-details">
+                      <h1 class="cursor-scale small">Pizza</h1>
+                      <span class="development">Html,css</span>
+                     <p> <a href="https://saasina-pizza.netlify.app/" target="_blank" class="view-project-5">View Project</a> </p>
+                    </div>
+                  </div>
+
+                  <div class="project" data-aos="fade-left">
+                    <img src="../img/excercise-css.jpeg" alt="css-excercise" class="project__photo cursor-scale">
+                    <div class="project-details">
+                      <h1 class="cursor-scale small">CSS Excercise</h1>
+                      <span class="development">Html,css</span>
+                     <p> <a href="https://excercise-css.netlify.app/" target="_blank" class="view-project-6">View Project</a> </p>
+                    </div>
+                  </div>
+
+                  
+
+              
+    </div>
+
+    <!-- our aos data -->
+    <!-- for amimation---------- https://github.com/michalsnik/aos -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 300,
+        duration:1000,
+        easing: 'ease-in-out',
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script>
+      // Select the cursor and cursor-scale elements
+var cursor = document.querySelector('.cursor'),
+    cursorScale = document.querySelectorAll('.cursor-scale'),
+    mouseX = 0,
+    mouseY = 0;
+
+// Move the cursor element to the current mouse position using GSAP
+gsap.to({}, 0.016, {
+    repeat: -1,
+
+    onRepeat: function () {
+        gsap.set(cursor, {
+            css: {
+                left: mouseX,
+                top: mouseY
+            }
+        });
+    }
+});
+
+// Update mouseX and mouseY variables on mousemove
+window.addEventListener("mousemove", function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+// Add mouseover and mouseleave events to cursor-scale elements
+cursorScale.forEach(link => {
+    link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('grow');
+        cursor.classList.remove('grow-small');
+    });
+    link.addEventListener('mousemove', () => {
+        cursor.classList.add('grow');
+        if(link.classList.contains('small')){
+            cursor.classList.remove('grow');
+            cursor.classList.add('grow-small');
+        }
+    });
+});
+
+    </script>
+
+  
+</body>
+</html>
